@@ -2885,8 +2885,8 @@ function bindMap() {
 async function init() {
   bindUi();
   const saved = lsGet('korset.theme');
-  const theme = saved === 'dark' || saved === 'light' ? saved
-    : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  // По умолчанию светлая: она лучше читается на проекторе; выбор пользователя запоминаем.
+  const theme = saved === 'dark' ? 'dark' : 'light';
   Theme.applyUi(theme);
   ThreeD.set(false, false);
   Sheet.init();
