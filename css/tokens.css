@@ -1,0 +1,29 @@
+/* Дизайн-токены Korset: светлая и тёмная темы. */
+:root {
+  --brand: #0A7EA4; --brand-strong: #086A8A; --brand-soft: rgba(10, 126, 164, .12); --brand-ink: #fff;
+  --gold: #F4B400;
+  --surface: #fff; --surface-2: #F2F4F7; --surface-3: #E3E7EC; --hover: rgba(15, 23, 42, .055);
+  --line: rgba(15, 23, 42, .09); --text: #111827; --text-2: #4B5563; --text-3: #8A94A3;
+  --ok: #12804C; --warn: #B95F00; --bad: #CF3A3A;
+  --a: #12A150; --b: #E5484D;
+  --shadow: 0 1px 2px rgba(15, 23, 42, .08), 0 8px 28px rgba(15, 23, 42, .14);
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, .12), 0 2px 8px rgba(15, 23, 42, .08);
+  --attrib-bg: rgba(255, 255, 255, .86);
+  --skel: #EBEEF2; --skel-hi: #F6F7F9;
+  --map-bg: #F3F1EC;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --panel-w: 400px; --r: 18px;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --brand: #3BB4DA; --brand-strong: #62C6E6; --brand-soft: rgba(59, 180, 218, .16); --brand-ink: #04232D;
+  --surface: #1B1F25; --surface-2: #252B32; --surface-3: #343B44; --hover: rgba(255, 255, 255, .07);
+  --line: rgba(255, 255, 255, .09); --text: #EEF1F4; --text-2: #B3BCC6; --text-3: #7F8A96;
+  --ok: #3ECF8E; --warn: #F5A524; --bad: #FF6B6B;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px rgba(0, 0, 0, .5);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5), 0 2px 8px rgba(0, 0, 0, .35);
+  --attrib-bg: rgba(22, 25, 30, .82);
+  --skel: #262C33; --skel-hi: #313841;
+  --map-bg: #16191E;
+  color-scheme: dark;
+}

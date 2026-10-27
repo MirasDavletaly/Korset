@@ -1,0 +1,23 @@
+/* Телефон: панель превращается в нижнюю шторку. */
+@media (max-width: 768px) {
+  .panel { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: none; border-radius: 20px 20px 0 0; box-shadow: 0 -2px 20px rgba(15, 23, 42, .18); transition: transform .34s cubic-bezier(.22, .8, .24, 1); will-change: transform; }
+  :root[data-theme="dark"] .panel { box-shadow: 0 -2px 20px rgba(0, 0, 0, .55); }
+  .panel.tall { bottom: 0; }
+  .panel.dragging { transition: none; }
+  .sheet-grab { display: flex; justify-content: center; align-items: center; height: 22px; flex: none; touch-action: none; cursor: grab; }
+  .sheet-grab span { width: 40px; height: 5px; border-radius: 3px; background: var(--surface-3); }
+  .panel-head { padding: 0 12px 10px; }
+  .brand { display: none; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 10px -12px 0; padding: 0 12px 2px; overscroll-behavior-x: contain; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { height: 34px; }
+  .panel-body { border-radius: 0; }
+  .view { padding: 2px 12px 16px; }
+  .ctrls { top: calc(env(safe-area-inset-top, 0px) + 40px); transform: none; right: 10px; gap: 8px; }
+  .ctrl { width: 42px; height: 42px; }
+  .toasts { left: 12px; right: 12px; width: auto; min-width: 0; transform: none; top: calc(env(safe-area-inset-top, 0px) + 36px); bottom: auto; }
+  .attrib { top: env(safe-area-inset-top, 0px); bottom: auto; left: 0; right: auto; max-width: calc(100% - 60px); font-size: 10.5px; border-radius: 0 0 9px 0; padding: 2px 8px; }
+  .actions { gap: 6px; }
+  .act { font-size: 12px; padding: 9px 2px; }
+  .suggest { max-height: calc(100dvh - 190px); }
+}

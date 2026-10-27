@@ -1,0 +1,44 @@
+/* Основа: сброс, типографика, кнопки, иконки, пустые состояния. */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; overscroll-behavior: none; }
+body {
+  font-family: var(--font); font-size: 15px; line-height: 1.4; color: var(--text); background: var(--map-bg);
+  -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%;
+}
+button { font: inherit; color: inherit; }
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+[hidden] { display: none !important; }
+#app { position: fixed; inset: 0; overflow: hidden; }
+
+.i { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; display: block; }
+.flip { transform: scaleX(-1); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 0 16px; border-radius: 12px; border: 0; font-weight: 600; cursor: pointer; text-decoration: none; }
+.btn:hover { text-decoration: none; filter: brightness(1.04); }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-soft { background: var(--surface-2); color: var(--text); }
+.btn-block { width: 100%; }
+.icon-btn { width: 38px; height: 38px; border-radius: 10px; border: 0; background: transparent; display: grid; place-items: center; cursor: pointer; color: var(--text-2); flex: none; }
+.icon-btn:hover { background: var(--hover); color: var(--text); }
+.note { color: var(--text-3); font-size: 13px; margin: 12px 2px 0; }
+
+.badge { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 13px; color: #fff; flex: none; }
+.badge-a { background: var(--a); }
+.badge-b { background: var(--b); }
+.kind-ico { width: 30px; height: 30px; border-radius: 50%; background: var(--c, var(--brand)); color: #fff; display: grid; place-items: center; flex: none; }
+.kind-ico .i { width: 17px; height: 17px; }
+
+.empty { text-align: center; padding: 26px 12px 18px; color: var(--text-2); }
+.empty .i { width: 36px; height: 36px; margin: 0 auto 10px; color: var(--text-3); stroke-width: 1.6; }
+.empty h3 { margin: 0 0 6px; font-size: 16px; color: var(--text); }
+.empty p { margin: 0 0 14px; font-size: 14px; }
+.empty.err .i { color: var(--bad); }
+
+.st { font-size: 13.5px; }
+.st-open { color: var(--ok); } .st-closing { color: var(--warn); } .st-closed { color: var(--bad); }
+.st-raw, .st-none { color: var(--text-3); }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
